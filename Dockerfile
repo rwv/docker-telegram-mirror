@@ -1,5 +1,7 @@
 FROM nginx:alpine
 
+LABEL maintainer="seedgou <seedgou@gmail.com>"
+
 RUN apk --no-cache add unzip wget \
     && wget https://github.com/zhukov/webogram/releases/download/v0.5.7/webogram_v0.5.7.zip \
     && unzip -o webogram_v0.5.7.zip -d /usr/share/nginx/html \
